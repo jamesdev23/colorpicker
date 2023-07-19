@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,13 +16,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: MyHomePage(title: 'Color Picker'),
+      home: const MyHomePage(title: 'Color Picker'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
- MyHomePage({Key? key, required this.title}) : super(key: key);
+ const MyHomePage({Key? key, required this.title}) : super(key: key);
 
  final String title;
 
